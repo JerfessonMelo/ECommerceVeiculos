@@ -335,6 +335,15 @@ body {
   height: 30px;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
 .container-compra {
   flex: 1;
   display: flex;
@@ -510,10 +519,31 @@ body {
     height: auto;
   }
 
+  .produto-wrapper {
+    min-height: auto;
+  }
+
   .info-left {
     flex-direction: column;
     align-items: center;
   }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-compra,
+  .container-vendas {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .button-compra {
+    width: 100%;
+    max-width: 300px;
+  }
+
   .container-inputs input,
   .descricao textarea,
   .descricao button {
