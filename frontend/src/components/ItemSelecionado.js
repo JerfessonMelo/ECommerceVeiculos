@@ -10,7 +10,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 function ItemSelecionado() {
   const { id } = useParams();
-  const [item, setItens] = useState([]);
+  const [item, setItens] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ function ItemSelecionado() {
   useEffect(() => {
     const fetchItens = async () => {
       try {
-        const response = await fetch(`${API_URL}/api/itens`);
+        const response = await fetch(`${API_URL}/api/itens/${id}`);
         const data = await response.json();
         setItens(data);
         setLoading(false);
