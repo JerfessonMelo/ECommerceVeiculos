@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import '../pages/home.css';
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "../pages/home.css";
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 function EsportivoItens() {
   const [itens, setItens] = useState([]);
@@ -10,7 +12,7 @@ function EsportivoItens() {
   useEffect(() => {
     const fetchItens = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/itens');
+        const response = await fetch(`${API_URL}/api/itens`);
         const data = await response.json();
         setItens(data);
         setLoading(false);
@@ -27,15 +29,32 @@ function EsportivoItens() {
     <div className="itens">
       {itens.length > 0 ? (
         <ul>
-          {itens.filter((item) => item.categoria === 'Esportivo' && (item.status?.toLowerCase() === 'novo' || item.status?.toLowerCase() === 'Novo')).map((item) => (
-            <li key={item._id}>
-              <Link to={`/itens/${item._id}`} className='link-item'>
-                <img src={`http://localhost:5000${item.imagem}`} alt={`${item.marca} ${item.modelo}`} className='carroimg' />
-                <a id='valorcolor'>{item.marca} {item.modelo} R$ {item.valor}</a>
-                <a><strong></strong>{item.ano} • {item.quilometragem} km • {item.categoria} • {item.status}</a>
-              </Link>
-            </li>
-          ))}
+          {itens
+            .filter(
+              (item) =>
+                item.categoria === "Esportivo" &&
+                (item.status?.toLowerCase() === "novo" ||
+                  item.status?.toLowerCase() === "Novo")
+            )
+            .map((item) => (
+              <li key={item._id}>
+                <Link to={`/itens/${item._id}`} className="link-item">
+                  <img
+                    src={`http://localhost:5000${item.imagem}`}
+                    alt={`${item.marca} ${item.modelo}`}
+                    className="carroimg"
+                  />
+                  <a id="valorcolor">
+                    {item.marca} {item.modelo} R$ {item.valor}
+                  </a>
+                  <a>
+                    <strong></strong>
+                    {item.ano} • {item.quilometragem} km • {item.categoria} •{" "}
+                    {item.status}
+                  </a>
+                </Link>
+              </li>
+            ))}
         </ul>
       ) : (
         <p>Automovel não encontrado</p>
