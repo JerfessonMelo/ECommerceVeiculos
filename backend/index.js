@@ -10,7 +10,7 @@ const UserRoutes = require("./routes/UserRoutes");
 
 app.use(
   cors({
-    origin: "https://e-commerce-veiculos.vercel.app/",
+    origin: "https://e-commerce-veiculos.vercel.app",
     credentials: true,
   })
 );
