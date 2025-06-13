@@ -498,12 +498,19 @@ body {
     width: 100%;
     height: auto;
   }
+
+  .container-inputs input {
+    width: 100%;
+    max-width: none;
+  }
   .container-inputs input,
   .info-left button,
   .descricao button,
   .button-compra {
     width: 100%;
     max-width: none;
+    margin-left: 0;
+    margin-right: 0;
   }
   .info-left {
     flex-direction: column;
