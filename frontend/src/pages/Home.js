@@ -18,7 +18,7 @@ function Home() {
   };
   useEffect(() => {
     const fetchItens = async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/itens`);
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/itens`);
       const data = await res.json();
       setCarros(data.slice(0, 10));
     };
@@ -92,7 +92,7 @@ function Home() {
               style={{ cursor: "pointer" }}
             >
               <img
-                src={`${process.env.NEXT_PUBLIC_API_URL}${item.imagem}`}
+                src={`${process.env.REACT_APP_API_URL}${item.imagem}`}
                 alt={`${item.marca} ${item.modelo}`}
                 className="carroimg"
               />

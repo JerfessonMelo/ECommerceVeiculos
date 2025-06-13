@@ -10,11 +10,11 @@ function Login() {
   const [erro, setErro] = useState("");
 
   const handleLogin = async () => {
-    console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
-    console.log("URL de API carregada:", process.env.NEXT_PUBLIC_API_URL);
+    console.log("API URL:", process.env.REACT_APP_API_URL);
+    console.log("URL de API carregada:", process.env.REACT_APP_API_URL);
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/login`,
+        `${process.env.REACT_APP_API_URL}/api/login`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
