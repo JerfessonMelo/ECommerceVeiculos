@@ -10,8 +10,6 @@ function Login() {
   const [erro, setErro] = useState("");
 
   const handleLogin = async () => {
-    console.log("API URL:", process.env.REACT_APP_API_URL);
-    console.log("URL de API carregada:", process.env.REACT_APP_API_URL);
     try {
       const response = await fetch(
         `${process.env.REACT_APP_API_URL}/api/login`,
