@@ -37,7 +37,7 @@ function ListaDeItens() {
                 style={{ cursor: "pointer" }}
               >
                 <img
-                  src={`http://localhost:5000${item.imagem}`}
+                  src={`${process.env.REACT_APP_API_URL}${item.imagem}`}
                   alt={`${item.marca} ${item.modelo}`}
                   className="carroimg"
                 />

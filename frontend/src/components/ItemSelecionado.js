@@ -88,7 +88,7 @@ function ItemSelecionado() {
         <div className="produto">
           <div className="info-left">
             <img
-              src={`http://localhost:5000${item.imagem}`}
+              src={`${process.env.REACT_APP_API_URL}${item.imagem}`}
               alt={`${item.marca} ${item.modelo}`}
               className="selecionado"
             />
