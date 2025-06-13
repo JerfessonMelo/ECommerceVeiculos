@@ -282,7 +282,7 @@ body {
 }
 
 .container-inputs input {
-  width: 190%;
+  width: 100%;
   max-width: 400px;
   padding: 10px;
   margin: 10px 0;
