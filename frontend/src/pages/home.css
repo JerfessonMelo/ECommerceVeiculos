@@ -23,8 +23,8 @@ body {
 }
 
 .TopColor {
-  background-color: #15696f;
-  padding: 1px 20px;
+  background: linear-gradient(90deg, #15696f, #63bdb5);
+  padding: 10px 20px;
   gap: 20px;
   flex: 1;
   min-width: 0;
