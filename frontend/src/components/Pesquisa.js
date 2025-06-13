@@ -23,7 +23,7 @@ function Pesquisa() {
   useEffect(() => {
     const fetchItens = async () => {
       const response = await fetch(`${API_URL}/api/itens`);
-      const data = await res.json();
+      const data = await response.json();
       setItens(data);
     };
     fetchItens();
@@ -106,7 +106,7 @@ function Pesquisa() {
               <li key={item._id}>
                 <Link to={`/itens/${item._id}`} className="link-item">
                   <img
-                    src={`http://localhost:5000${item.imagem}`}
+                    src={`${API_URL}${item.imagem}`}
                     alt={`${item.marca} ${item.modelo}`}
                     className="carroimg"
                   />
