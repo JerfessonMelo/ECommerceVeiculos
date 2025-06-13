@@ -514,4 +514,20 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .container-inputs input,
+  .descricao textarea,
+  .descricao button {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .rodape {
+    flex-direction: column;
+  }
+
+  .situacao-radios,
+  .estilo-radios {
+    flex-direction: column;
+  }
 }
