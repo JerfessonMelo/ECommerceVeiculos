@@ -10,6 +10,7 @@ function Login() {
   const [erro, setErro] = useState("");
 
   const handleLogin = async () => {
+    console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
     try {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/api/login`,
