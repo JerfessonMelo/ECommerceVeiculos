@@ -7,7 +7,7 @@ body {
 
 body {
   /* background: linear-gradient(135deg, #282828, #15696F, #63BDB5, #858585, #EEF2F0, #858585, #63BDB5, #15696F, #282828); */
-  background-color: #EEF2F0;
+  background-color: #eef2f0;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -23,7 +23,7 @@ body {
 }
 
 .TopColor {
-  background-color: #15696F;
+  background-color: #15696f;
   padding: 1px 20px;
   gap: 20px;
   flex: 1;
@@ -54,7 +54,7 @@ body {
 
 .TopColor a {
   text-decoration: none;
-  color: #EEF2F0;
+  color: #eef2f0;
 }
 
 .MedioColor {
@@ -111,7 +111,7 @@ body {
   font-size: medium;
 }
 .colorUser {
-  color: #EEF2F0;
+  color: #eef2f0;
   border-radius: 30px;
   padding: 10px 10px;
   padding-left: -20px;
@@ -202,7 +202,7 @@ body {
 }
 
 .modeloDoItem {
-  color: #63BDB5;
+  color: #63bdb5;
 }
 
 .info-left {
@@ -218,7 +218,7 @@ body {
   list-style: none;
 }
 .detalhes-lista li {
-   background-color: #28282831;
+  background-color: #28282831;
 }
 
 .info-left h4 {
@@ -243,7 +243,7 @@ body {
   max-width: 300px;
   padding: 15px;
   font-size: 1rem;
-  background-color: #63BDB5;
+  background-color: #63bdb5;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -252,7 +252,7 @@ body {
 }
 
 .info-left button:hover {
-  background-color: #15696F;
+  background-color: #15696f;
 }
 
 .cor {
@@ -312,7 +312,6 @@ body {
   border-radius: 2px;
 }
 
-
 .button-compra {
   margin-top: 1.5rem;
   padding: 15px 24px;
@@ -324,7 +323,7 @@ body {
 }
 
 .button-compra:hover {
-  background-color: #63BDB5;
+  background-color: #63bdb5;
 }
 
 .container-inputs select {
@@ -375,7 +374,7 @@ body {
   max-width: 300px;
   padding: 15px;
   font-size: 1rem;
-  background-color: #63BDB5;
+  background-color: #63bdb5;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -393,7 +392,7 @@ body {
   max-width: 200px;
   padding: 15px;
   font-size: 1rem;
-  background-color: #63BDB5;
+  background-color: #63bdb5;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -406,7 +405,7 @@ body {
 }
 
 .button-compra:hover {
-  background-color: #15696F;
+  background-color: #15696f;
   transform: scale(1.05);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -473,4 +472,41 @@ body {
 .carroY:hover {
   transform: scale(1.06);
   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .TopColor ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+  }
+
+  .TopColor input {
+    width: 100%;
+    margin: 0;
+  }
+
+  .slick-slider {
+    width: 100%;
+  }
+
+  .slick-slide img {
+    width: 120px;
+    height: 80px;
+  }
+
+  .carroimg {
+    width: 250px;
+    height: 150px;
+  }
+
+  .selecionado {
+    width: 90%;
+    height: auto;
+  }
+
+  .info-left {
+    flex-direction: column;
+    align-items: center;
+  }
 }
