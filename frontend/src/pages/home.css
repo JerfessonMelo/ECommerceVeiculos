@@ -473,3 +473,38 @@ body {
   transform: scale(1.06);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+@media (max-width: 600px) {
+  .TopColor ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .TopColor input {
+    width: 100%;
+    margin: 0;
+  }
+  .itens ul {
+    padding: 20px;
+    gap: 20px;
+  }
+  .itens li {
+    flex-direction: column;
+    align-items: center;
+  }
+  .carroimg {
+    width: 100%;
+    height: auto;
+  }
+  .container-inputs input,
+  .info-left button,
+  .descricao button,
+  .button-compra {
+    width: 100%;
+    max-width: none;
+  }
+  .tire-track-loop,
+  .tire-track-loop2 {
+    display: none;
+  }
+}
