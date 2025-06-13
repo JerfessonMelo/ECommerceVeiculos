@@ -11,6 +11,7 @@ import ListaDeItens from "../components/ListaDeItens";
 function Home() {
   const navigate = useNavigate();
   const [carros, setCarros] = useState([]);
+  const API_URL = process.env.REACT_APP_API_URL;
   const tipoUsuario = localStorage.getItem("tipoUsuario");
   const nomeUsuario = localStorage.getItem("nome");
   const handleLogin = () => {
@@ -92,7 +93,7 @@ function Home() {
               style={{ cursor: "pointer" }}
             >
               <img
-                src={`${process.env.REACT_APP_API_URL}${item.imagem}`}
+                src={`${API_URL}${item.imagem}`}
                 alt={`${item.marca} ${item.modelo}`}
                 className="carroimg"
               />
