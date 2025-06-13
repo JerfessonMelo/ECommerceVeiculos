@@ -146,6 +146,12 @@ function Cadastroproduto() {
         />
         <input
           type="text"
+          name="categoria"
+          placeholder="Categoria"
+          onChange={handleChange}
+        />
+        <input
+          type="text"
           name="cor"
           placeholder="Cor"
           onChange={handleChange}
